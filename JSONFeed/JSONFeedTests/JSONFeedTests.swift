@@ -33,19 +33,17 @@ class JSONFeedTests: XCTestCase {
     
     func testParseJsonFeedOrg() {
         let feed = try? JSONFeed(data: jsonfeedOrg)
-        print("Error = \(feed)")
+        
     
     }
     
     func testParseJsonFeedOrgPodcast() {
         let feed = try? JSONFeed(data: jsonfeedOrgPodcast)
-        print("Error = \(feed)")
         
     }
     
     func testParseJsonFeedOrgMicroblog() {
         let feed = try? JSONFeed(data: jsonfeedOrgMicroblog)
-        print("Error = \(feed)")
         
     }
     
