@@ -30,11 +30,16 @@ struct JSONFeedItem {
         guard let id = json[keys.id] as? String else { return nil } // items without id will be discarded, per spec
         self.id = id
         
+        self.contentText = json[keys.contentText] as? String
+        self.contentHtml = json[keys.contentHtml] as? String
+        
+        if contentHtml == nil && contentText == nil {
+            return nil
+        }
+        
         self.url = URL(for: keys.url, inJson: json)
         self.externalUrl = URL(for: keys.externalUrl, inJson: json)
         self.title = json[keys.title] as? String
-        self.contentText = json[keys.contentText] as? String
-        self.contentHtml = json[keys.contentHtml] as? String
         self.summary = json[keys.summary] as? String
         self.image = URL(for: keys.image, inJson: json)
         self.bannerImage = URL(for: keys.bannerImage, inJson: json)
