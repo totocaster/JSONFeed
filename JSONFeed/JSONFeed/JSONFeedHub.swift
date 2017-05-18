@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct JSONFeedHub {
+    let type: String
+    let url: String
+    
+}

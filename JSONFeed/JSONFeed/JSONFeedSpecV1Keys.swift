@@ -35,6 +35,7 @@ internal enum JSONFeedSpecV1Keys {
         static let id = "id"
         static let url = "url"
         static let externalUrl = "external_url"
+        static let title = "title"
         static let contentHtml = "content_html"
         static let contentText = "content_text"
         static let summary = "summary"
@@ -44,11 +45,13 @@ internal enum JSONFeedSpecV1Keys {
         static let dateModified = "date_modified"
         static let author = "author"
         static let tags = "tags"
+        static let attachments = "attachments"
     }
     
     enum Attachment {
         static let url = "url"
         static let mimeType = "mime_type"
+        static let title = "title"
         static let sizeBytes = "size_in_bytes"
         static let durationSeconds = "duration_in_seconds"
     }

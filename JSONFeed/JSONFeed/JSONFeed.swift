@@ -27,72 +27,49 @@ class JSONFeed {
     let icon: URL?
     let favicon: URL?
     let author: JSONFeedAuhtor?
-    let isExpired: Bool = false
-    let hubs: [JSONFeedHub] = []
+    let isExpired: Bool
+    let hubs: [JSONFeedHub]
     
-    let items: [JSONFeedItem] = []
+    let items: [JSONFeedItem]
     
     init(json: JsonDictionary) throws {
-        let topKey = JSONFeedSpecV1Keys.Top.self // easier on eyes
+        let keys = JSONFeedSpecV1Keys.Top.self // easier on eyes
         
         guard
-            let version = json[topKey.version] as? URL,
-            let title = json[topKey.title] as? String
+            let version = URL(for: keys.version, inJson: json),
+            let title = json[keys.title] as? String
             else {
                 throw JSONFeedError.invalidFeed
             }
         
         self.version = version
         self.title = title
+
+        self.homePage = URL(for: keys.homePageUrl, inJson: json)
+        self.url = URL(for: keys.feedUrl, inJson: json)
+        self.feedDescription = json[keys.description] as? String
+        self.comment = json[keys.userComment] as? String
+        self.nextFeed = URL(for: keys.nextUrl, inJson: json)
+        self.icon = URL(for: keys.icon, inJson: json)
+        self.favicon = URL(for: keys.favicon, inJson: json)
+        self.isExpired = json[keys.expired] as? Bool ?? false // nil = false, as per spec
         
-        if let homePage = json[topKey.homePageUrl] as? URL {
-            self.homePage = homePage
+        if let authorJson = json[keys.author] as? JsonDictionary {
+            self.author = JSONFeedAuhtor(json: authorJson)
+        } else {
+            self.author = nil
         }
         
-        if let url = json[topKey.feedUrl] as? URL {
-            self.url = url
-        }
-        
-        if let feedDescription = json[topKey.description] as? String {
-            self.feedDescription = feedDescription
-        }
-        
-        if let comment = json[topKey.userComment] as? String {
-            self.comment = comment
-        }
-        
-        if let nextFeed = json[topKey.nextUrl] as? URL {
-            self.nextFeed = nextFeed
-        }
-        
-        if let icon = json[topKey.icon] as? URL {
-            self.icon = icon
-        }
-        
-        if let favicon = json[topKey.favicon] as? URL {
-            self.favicon = favicon
-        }
-        
-        if let author = json[topKey.author] as? JsonDictionary {
-            self.author = nil // TODO: ...
-        }
-        
-        if let isExpired = json[topKey.expired] as? Bool {
-            self.isExpired = isExpired
-        }
-        
-        if let hubs = json[topKey.hubs] as? [JsonDictionary] {
+        if let hubs = json[keys.hubs] as? [JsonDictionary] {
             self.hubs = [] // TODO: ..
+        } else {
+            self.hubs = []
         }
         
-        if let jsonItems = json[topKey.items] as? [JsonDictionary] {
-            var result:[JSONFeedItem] = []
-            for jsonItem in jsonItems {
-                if let item = JSONFeedItem(json: jsonItem) {
-                    result.append(item)
-                }
-            }
-            self.items = result
+        if let itemsJson = json[keys.items] as? [JsonDictionary] {
+            self.items = itemsJson.flatMap(JSONFeedItem.init)
+        } else {
+            self.items = []
         }
         
     }
@@ -109,14 +86,9 @@ class JSONFeed {
 }
 
 
-
-struct JSONFeedAuhtor {
-    let name: String?
-    let url: URL?
-    let avatar: URL?
-}
-
-struct JSONFeedHub {
-    let type: String
-    let url: String
+extension URL {
+    init?(for key: String, inJson json: JsonDictionary) {
+        guard let urlString = json[key] as? String else { return nil }
+        self.init(string: urlString)
+    }
 }

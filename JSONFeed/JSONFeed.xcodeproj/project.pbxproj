@@ -10,6 +10,13 @@
 		992AD6111ECD17D600EEBB0B /* JSONFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992AD6071ECD17D500EEBB0B /* JSONFeed.framework */; };
 		992AD6161ECD17D600EEBB0B /* JSONFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6151ECD17D600EEBB0B /* JSONFeedTests.swift */; };
 		992AD6181ECD17D600EEBB0B /* JSONFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 992AD60A1ECD17D500EEBB0B /* JSONFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		992AD6241ECD1D1000EEBB0B /* json_feed_org_sample1.json in Resources */ = {isa = PBXBuildFile; fileRef = 992AD6231ECD1D1000EEBB0B /* json_feed_org_sample1.json */; };
+		992AD6281ECD262A00EEBB0B /* JSONFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6271ECD262A00EEBB0B /* JSONFeedItem.swift */; };
+		992AD62E1ECD269A00EEBB0B /* JSONFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD62B1ECD269A00EEBB0B /* JSONFeed.swift */; };
+		992AD62F1ECD269A00EEBB0B /* JSONFeedAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD62C1ECD269A00EEBB0B /* JSONFeedAttachment.swift */; };
+		992AD6301ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */; };
+		992AD6321ECD26BD00EEBB0B /* JSONFeedAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */; };
+		992AD6341ECD26DA00EEBB0B /* JSONFeedHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		992AD6101ECD17D600EEBB0B /* JSONFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		992AD6151ECD17D600EEBB0B /* JSONFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFeedTests.swift; sourceTree = "<group>"; };
 		992AD6171ECD17D600EEBB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		992AD6231ECD1D1000EEBB0B /* json_feed_org_sample1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json_feed_org_sample1.json; sourceTree = "<group>"; };
+		992AD6271ECD262A00EEBB0B /* JSONFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedItem.swift; sourceTree = "<group>"; };
+		992AD62B1ECD269A00EEBB0B /* JSONFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeed.swift; sourceTree = "<group>"; };
+		992AD62C1ECD269A00EEBB0B /* JSONFeedAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAttachment.swift; sourceTree = "<group>"; };
+		992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedSpecV1Keys.swift; sourceTree = "<group>"; };
+		992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAuthor.swift; sourceTree = "<group>"; };
+		992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedHub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +87,12 @@
 			children = (
 				992AD60A1ECD17D500EEBB0B /* JSONFeed.h */,
 				992AD60B1ECD17D500EEBB0B /* Info.plist */,
+				992AD62B1ECD269A00EEBB0B /* JSONFeed.swift */,
+				992AD6271ECD262A00EEBB0B /* JSONFeedItem.swift */,
+				992AD62C1ECD269A00EEBB0B /* JSONFeedAttachment.swift */,
+				992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */,
+				992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */,
+				992AD6351ECD26E400EEBB0B /* Specs */,
 			);
 			path = JSONFeed;
 			sourceTree = "<group>";
@@ -82,8 +102,17 @@
 			children = (
 				992AD6151ECD17D600EEBB0B /* JSONFeedTests.swift */,
 				992AD6171ECD17D600EEBB0B /* Info.plist */,
+				992AD6231ECD1D1000EEBB0B /* json_feed_org_sample1.json */,
 			);
 			path = JSONFeedTests;
+			sourceTree = "<group>";
+		};
+		992AD6351ECD26E400EEBB0B /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */,
+			);
+			name = Specs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +178,7 @@
 					992AD6061ECD17D500EEBB0B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HCKE9T3AHJ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					992AD60F1ECD17D600EEBB0B = {
@@ -188,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992AD6241ECD1D1000EEBB0B /* json_feed_org_sample1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +229,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992AD6281ECD262A00EEBB0B /* JSONFeedItem.swift in Sources */,
+				992AD6341ECD26DA00EEBB0B /* JSONFeedHub.swift in Sources */,
+				992AD62E1ECD269A00EEBB0B /* JSONFeed.swift in Sources */,
+				992AD6321ECD26BD00EEBB0B /* JSONFeedAuthor.swift in Sources */,
+				992AD62F1ECD269A00EEBB0B /* JSONFeedAttachment.swift in Sources */,
+				992AD6301ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +361,7 @@
 		992AD61C1ECD17D600EEBB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HCKE9T3AHJ;
@@ -336,6 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tototvalavadze.JSONFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +382,7 @@
 		992AD61D1ECD17D600EEBB0B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HCKE9T3AHJ;
@@ -362,6 +402,7 @@
 		992AD61F1ECD17D600EEBB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HCKE9T3AHJ;
 				INFOPLIST_FILE = JSONFeedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +415,7 @@
 		992AD6201ECD17D600EEBB0B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = HCKE9T3AHJ;
 				INFOPLIST_FILE = JSONFeedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
