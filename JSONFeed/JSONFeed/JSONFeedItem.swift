@@ -45,7 +45,7 @@ struct JSONFeedItem {
             self.date = Date() // per spec
         }
 
-        if let dateModifiedString = json[keys.datePublished] as? String, let dateModified = ISO8601DateFormatter().date(from: dateModifiedString) {
+        if let dateModifiedString = json[keys.dateModified] as? String, let dateModified = ISO8601DateFormatter().date(from: dateModifiedString) {
             self.dateModified = dateModified
         } else {
             self.dateModified = nil

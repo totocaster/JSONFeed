@@ -11,9 +11,19 @@ import XCTest
 
 class JSONFeedTests: XCTestCase {
     
+    var jsonfeedOrg: Data! = nil
+    var jsonfeedOrgPodcast: Data! = nil
+    var jsonfeedOrgMicroblog: Data! = nil
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let bundle = Bundle(for: type(of: self))
+        
+        jsonfeedOrg = NSData(contentsOfFile: bundle.path(forResource: "jsonfeed_org", ofType: "json")!)! as Data
+        jsonfeedOrgPodcast = NSData(contentsOfFile: bundle.path(forResource: "jsonfeed_org_podcast", ofType: "json")!)! as Data
+        jsonfeedOrgMicroblog = NSData(contentsOfFile: bundle.path(forResource: "jsonfeed_org_microblog", ofType: "json")!)! as Data
+        
     }
     
     override func tearDown() {
@@ -21,16 +31,32 @@ class JSONFeedTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testParseJsonFeedOrg() {
+        let feed = try? JSONFeed(data: jsonfeedOrg)
+        print("Error = \(feed)")
+    
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testParseJsonFeedOrgPodcast() {
+        let feed = try? JSONFeed(data: jsonfeedOrgPodcast)
+        print("Error = \(feed)")
+        
     }
+    
+    func testParseJsonFeedOrgMicroblog() {
+        let feed = try? JSONFeed(data: jsonfeedOrgMicroblog)
+        print("Error = \(feed)")
+        
+    }
+    
+    
+    
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
