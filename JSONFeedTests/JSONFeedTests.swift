@@ -32,29 +32,48 @@ class JSONFeedTests: XCTestCase {
     }
     
     func testParseJsonFeedOrg() {
-        let feed = try? JSONFeed(data: jsonfeedOrg)
+        let feed = try! JSONFeed(data: jsonfeedOrg)
         
-    
+        XCTAssert(feed.title == "My Example Feed")
+        XCTAssert(feed.homePage == URL(string: "https://example.org/"))
+        XCTAssert(feed.items.count == 2)
+        
+        let first = feed.items.first!
+        XCTAssert(first.contentText == "This is a second item.")
+        XCTAssert(first.url == URL(string: "https://example.org/second-item"))
+        XCTAssert(first.id == "2")
+        
     }
     
     func testParseJsonFeedOrgPodcast() {
-        let feed = try? JSONFeed(data: jsonfeedOrgPodcast)
+        let feed = try! JSONFeed(data: jsonfeedOrgPodcast)
+        
+        XCTAssert(feed.items.count == 1)
+        
+        let first = feed.items.first!
+        XCTAssert(first.contentHtml == "Chris has worked at <a href=\"http://adobe.com/\">Adobe</a> and as a founder of Rogue Sheep, which won an Apple Design Award for Postage. Chris’s new company is Aged & Distilled with Guy English — which shipped <a href=\"http://aged-and-distilled.com/napkin/\">Napkin</a>, a Mac app for visual collaboration. Chris is also the co-host of The Record. He lives on <a href=\"http://www.ci.bainbridge-isl.wa.us/\">Bainbridge Island</a>, a quick ferry ride from Seattle.")
+        XCTAssert(first.url == URL(string: "http://therecord.co/chris-parrish"))
+        XCTAssert(first.id == "http://therecord.co/chris-parrish")
+        XCTAssert(first.attachments.count == 1)
+        
+        let attach = first.attachments.first!
+        XCTAssert(attach.mimeType == "audio/x-m4a")
+        XCTAssert(attach.url == URL(string: "http://therecord.co/downloads/The-Record-sp1e1-ChrisParrish.m4a"))
+        XCTAssert(attach.size == 89970236)
+        XCTAssert(attach.duration == 6629)
         
     }
     
     func testParseJsonFeedOrgMicroblog() {
-        let feed = try? JSONFeed(data: jsonfeedOrgMicroblog)
+        let feed = try! JSONFeed(data: jsonfeedOrgMicroblog)
+        
+        XCTAssertNotNil(feed.author, "Microblog sample has author")
+        
+        let author = feed.author!
+        XCTAssert(author.name == "Brent Simmons")
+        XCTAssert(author.url == URL(string: "http://example.org/"))
+        XCTAssert(author.avatar == URL(string: "https://example.org/avatar.png"))
+        
         
     }
-    
-    
-    
-    
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }
-    
 }
