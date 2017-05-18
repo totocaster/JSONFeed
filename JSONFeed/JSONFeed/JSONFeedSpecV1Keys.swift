@@ -55,4 +55,9 @@ internal enum JSONFeedSpecV1Keys {
         static let sizeBytes = "size_in_bytes"
         static let durationSeconds = "duration_in_seconds"
     }
+    
+    enum Hub {
+        static let type = "type"
+        static let url = "url"
+    }
 }
