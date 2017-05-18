@@ -40,13 +40,13 @@
 		992AD6151ECD17D600EEBB0B /* JSONFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFeedTests.swift; sourceTree = "<group>"; };
 		992AD6171ECD17D600EEBB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992AD6231ECD1D1000EEBB0B /* jsonfeed_org.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonfeed_org.json; sourceTree = "<group>"; };
-		992AD6271ECD262A00EEBB0B /* JSONFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedItem.swift; sourceTree = "<group>"; };
-		992AD62B1ECD269A00EEBB0B /* JSONFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeed.swift; sourceTree = "<group>"; };
-		992AD62C1ECD269A00EEBB0B /* JSONFeedAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAttachment.swift; sourceTree = "<group>"; };
-		992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedSpecV1Keys.swift; sourceTree = "<group>"; };
-		992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAuthor.swift; sourceTree = "<group>"; };
-		992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedHub.swift; sourceTree = "<group>"; };
-		992AD6371ECD315300EEBB0B /* URL+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Json.swift"; sourceTree = "<group>"; };
+		992AD6271ECD262A00EEBB0B /* JSONFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFeedItem.swift; path = ../Classes/JSONFeedItem.swift; sourceTree = "<group>"; };
+		992AD62B1ECD269A00EEBB0B /* JSONFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFeed.swift; path = ../Classes/JSONFeed.swift; sourceTree = "<group>"; };
+		992AD62C1ECD269A00EEBB0B /* JSONFeedAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFeedAttachment.swift; path = ../Classes/JSONFeedAttachment.swift; sourceTree = "<group>"; };
+		992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFeedSpecV1Keys.swift; path = ../Classes/JSONFeedSpecV1Keys.swift; sourceTree = "<group>"; };
+		992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFeedAuthor.swift; path = ../Classes/JSONFeedAuthor.swift; sourceTree = "<group>"; };
+		992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONFeedHub.swift; path = ../Classes/JSONFeedHub.swift; sourceTree = "<group>"; };
+		992AD6371ECD315300EEBB0B /* URL+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Json.swift"; path = "../Classes/URL+Json.swift"; sourceTree = "<group>"; };
 		992AD63A1ECD35B000EEBB0B /* jsonfeed_org_podcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonfeed_org_podcast.json; sourceTree = "<group>"; };
 		992AD63C1ECD35F500EEBB0B /* jsonfeed_org_microblog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonfeed_org_microblog.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -474,6 +474,7 @@
 				992AD61D1ECD17D600EEBB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		992AD61E1ECD17D600EEBB0B /* Build configuration list for PBXNativeTarget "JSONFeedTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +483,7 @@
 				992AD6201ECD17D600EEBB0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
