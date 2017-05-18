@@ -17,6 +17,7 @@
 		992AD6301ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */; };
 		992AD6321ECD26BD00EEBB0B /* JSONFeedAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */; };
 		992AD6341ECD26DA00EEBB0B /* JSONFeedHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */; };
+		992AD6381ECD315300EEBB0B /* URL+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6371ECD315300EEBB0B /* URL+Json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedSpecV1Keys.swift; sourceTree = "<group>"; };
 		992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAuthor.swift; sourceTree = "<group>"; };
 		992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedHub.swift; sourceTree = "<group>"; };
+		992AD6371ECD315300EEBB0B /* URL+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Json.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */,
 				992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */,
 				992AD6351ECD26E400EEBB0B /* Specs */,
+				992AD6361ECD313700EEBB0B /* Foundation+Extensions */,
 			);
 			path = JSONFeed;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 				992AD62D1ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift */,
 			);
 			name = Specs;
+			sourceTree = "<group>";
+		};
+		992AD6361ECD313700EEBB0B /* Foundation+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				992AD6371ECD315300EEBB0B /* URL+Json.swift */,
+			);
+			name = "Foundation+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				992AD62E1ECD269A00EEBB0B /* JSONFeed.swift in Sources */,
 				992AD6321ECD26BD00EEBB0B /* JSONFeedAuthor.swift in Sources */,
 				992AD62F1ECD269A00EEBB0B /* JSONFeedAttachment.swift in Sources */,
+				992AD6381ECD315300EEBB0B /* URL+Json.swift in Sources */,
 				992AD6301ECD269A00EEBB0B /* JSONFeedSpecV1Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

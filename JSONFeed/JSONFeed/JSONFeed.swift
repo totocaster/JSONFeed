@@ -60,8 +60,8 @@ class JSONFeed {
             self.author = nil
         }
         
-        if let hubs = json[keys.hubs] as? [JsonDictionary] {
-            self.hubs = [] // TODO: ..
+        if let hubsJson = json[keys.hubs] as? [JsonDictionary] {
+            self.hubs = hubsJson.flatMap(JSONFeedHub.init)
         } else {
             self.hubs = []
         }
@@ -82,13 +82,5 @@ class JSONFeed {
     convenience init(jsonString: String) throws {
         let data = jsonString.data(using: .utf8)!
         try self.init(data: data)
-    }
-}
-
-
-extension URL {
-    init?(for key: String, inJson json: JsonDictionary) {
-        guard let urlString = json[key] as? String else { return nil }
-        self.init(string: urlString)
     }
 }
