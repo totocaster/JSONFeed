@@ -9,7 +9,7 @@ Swift parser for JSON Feed — a new format similar to RSS and Atom but in JSON.
 
 ---
 
-⚠️ **This is work in progress repo. Contributions are more than welcome! ** Here is how my todo list looks like now:
+⚠️ **This is work in progress repo. Contributions are more than welcome!** Here is how my todo list looks like now:
 
 - [x] Implement framework so its usable
 - [ ] Add much more elaborate tests
