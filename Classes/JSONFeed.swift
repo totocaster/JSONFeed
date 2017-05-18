@@ -8,31 +8,66 @@
 
 import Foundation
 
+/// Same as `[String: Any]`
 public typealias JsonDictionary = [String: Any]
 
+
 public enum JSONFeedError: Error {
+
+    /// Data is not recognized as valid feed.
     case invalidFeed
+    
+    /// Data is not recognized as valid JSON.
     case invalidJson
 }
 
-class JSONFeed {
+
+/// Feed represenration and parsing object.
+public class JSONFeed {
     
-    let version: URL
-    let title: String
-    let homePage: URL?
-    let url: URL?
-    let feedDescription: String?
-    let comment: String?
-    let nextFeed: URL?
-    let icon: URL?
-    let favicon: URL?
-    let author: JSONFeedAuhtor?
-    let isExpired: Bool
-    let hubs: [JSONFeedHub]
+    /// URL of the version of the format the feed uses.
+    public let version: URL
     
-    let items: [JSONFeedItem]
+    /// Name of the feed, which will often correspond to the name of the website (blog, for instance), though not necessarily.
+    public let title: String
     
-    init(json: JsonDictionary) throws {
+    /// URL of the resource that the feed describes. This resource may or may not actually be a “home” page, but it should be an HTML page.
+    public let homePage: URL?
+    
+    // URL of the feed, and serves as the unique identifier for the feed. As with `homePage`, this should be considered required for feeds on the public web.
+    public let url: URL?
+    
+    /// Provides more detail, beyond the `title`, on what the feed is about. A feed reader may display this text.
+    public let feedDescription: String?
+    
+    /// Description of the purpose of the feed. This is for the use of people looking at the raw parsed JSON, and should be ignored by feed readers.
+    public let comment: String?
+    
+    /// URL of a feed that provides the next n items, where n is determined by the publisher. This allows for pagination, but with the expectation that reader software is not required to use it and probably won’t use it very often. 
+    public let nextFeed: URL?
+    
+    /// URL of an image for the feed suitable to be used in a timeline, much the way an avatar might be used. It should be square and relatively large — such as 512 x 512 — so that it can be scaled-down and so that it can look good on retina displays.
+    public let icon: URL?
+    
+    /// URL of an image for the feed suitable to be used in a source list. It should be square and relatively small, but not smaller than 64 x 64 (so that it can look good on retina displays).
+    public let favicon: URL?
+    
+    /// Specifies the feed author. The author object has several members, see `JSONFeedAuhtor`.
+    public let author: JSONFeedAuhtor?
+    
+    /// says whether or not the feed is finished — that is, whether or not it will ever update again.
+    public let isExpired: Bool
+    
+    /// Describes endpoints that can be used to subscribe to real-time notifications from the publisher of this feed.
+    public let hubs: [JSONFeedHub]
+    
+    /// Items of this feed.
+    public let items: [JSONFeedItem]
+    
+    
+    // MARK: - Parsing
+    
+    public init(json: JsonDictionary) throws {
         let keys = JSONFeedSpecV1Keys.Top.self // easier on eyes
         
         guard
@@ -74,12 +109,12 @@ class JSONFeed {
         
     }
     
-    convenience init(data: Data) throws {
+    public convenience init(data: Data) throws {
         guard let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? JsonDictionary else { throw JSONFeedError.invalidJson }
         try self.init(json: jsonDict)
     }
     
-    convenience init(jsonString: String) throws {
+    public convenience init(jsonString: String) throws {
         let data = jsonString.data(using: .utf8)!
         try self.init(data: data)
     }

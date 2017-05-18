@@ -13,7 +13,7 @@ Swift parser for JSON Feed — a new format similar to RSS and Atom but in JSON.
 
 - [x] Implement framework so its usable
 - [ ] Add much more elaborate tests
-- [ ] Proper in-line documentation
+- [x] Proper in-line documentation
 - [x] Clear documentation in README (you are looking at it now)
 - [x] Add CococaPods support
 - [ ] Add Carthage support

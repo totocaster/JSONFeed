@@ -8,10 +8,19 @@
 
 import Foundation
 
-struct JSONFeedAuhtor {
-    let name: String?
-    let url: URL?
-    let avatar: URL?
+public struct JSONFeedAuhtor {
+    
+    /// The author’s name
+    public let name: String?
+    
+    /// URL of a site owned by the author. It could be a blog, micro-blog, Twitter account, and so on.
+    public let url: URL?
+    
+    /// URL for an image for the author. As with `icon`, it should be square and relatively large.
+    public let avatar: URL?
+    
+    
+    // MARK: - Parsing
     
     internal init(json: JsonDictionary) {
         let keys = JSONFeedSpecV1Keys.Author.self

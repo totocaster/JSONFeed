@@ -8,12 +8,26 @@
 
 import Foundation
 
-struct JSONFeedAttachment {
-    let url: URL
-    let mimeType: String
-    let title: String?
-    let size: UInt64? // bytes
-    let duration: UInt? // seconds
+public struct JSONFeedAttachment {
+    
+    /// Specifies the location of the attachment.
+    public let url: URL
+    
+    /// Specifies the type of the attachment, such as `audio/mpeg`.
+    public let mimeType: String
+    
+    /// name for the attachment. 
+    /// - important: if there are multiple attachments, and two or more have the exact same title (when title is present), then they are considered as alternate representations of the same thing. In this way a podcaster, for instance, might provide an audio recording in different formats.
+    public let title: String?
+    
+    /// Specifies how large the file is in *bytes*.
+    public let size: UInt64?
+    
+    /// Specifies how long the attachment takes to listen to or watch in *seconds*.
+    public let duration: UInt?
+    
+    
+    // MARK: - Parsing
     
     internal init?(json: JsonDictionary) {
         let keys = JSONFeedSpecV1Keys.Attachment.self

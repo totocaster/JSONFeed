@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct JSONFeedHub {
-    let type: String
-    let url: URL
+public struct JSONFeedHub {
+    public let type: String
+    public let url: URL
+    
+    // MARK: - Parsing
     
     internal init?(json: JsonDictionary) {
         let keys = JSONFeedSpecV1Keys.Hub.self
