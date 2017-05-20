@@ -88,14 +88,32 @@ Inert `JSONFeedAuthor` struct with name, avatar URL and web URL. Can be present 
 
 ## Installation
 
-Coming soon.
+#### CocoaPods
+You can use [CocoaPods](http://cocoapods.org/) to install `JSONFeed` by adding it to your `Podfile`:
 
+```ruby
+platform :ios, '10.0'
+use_frameworks!
+pod 'JSONFeed'
+```
+
+Import `JSONFeed` wherever you plan to parse feed and follow instructions from above.
+
+
+#### Carthage
+Create a `Cartfile` that lists the framework and run `carthage update`. Follow the [instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios) to add `$(SRCROOT)/Carthage/Build/iOS/JSONFeed.framework` to an iOS project.
+
+```
+github "totocaster/JSONFeed"
+```
+
+#### Manually
+Download and drop all files from ```Classes``` folder into in your project.
 
 ---
 
 ## License
 
-Typist is released under the MIT license. See ``LICENSE`` for details.
-
+JSONFeed is released under the MIT license. See ``LICENSE`` for details.
 
 [v1]: https://jsonfeed.org/version/1
