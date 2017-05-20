@@ -28,16 +28,16 @@ Thanks for checking-out JSONFeed!
 
 ## Usage
 
-Parsing feed is super easy, just pass data from responce or file to when crating feed object and that's it! 
+Parsing a feed is super easy; just pass data from a response or file to JSONFeed to create a feed object and that's it!
 
 ```swift
-let feed = try? JSONFeed(data: responceData)
+let feed = try? JSONFeed(data: responseData)
 ```
 
-Alternatively you can create objects from JSON string or JSON dictionary:
+Alternatively you can create objects from a JSON string or JSON dictionary:
 
 ```swift
-let dictionary:[String: Any] = ["title":"..."]
+let dictionary: [String: Any] = ["title": "..."]
 let feed = try? JSONFeed(json: dictionary)
 ```
 
@@ -46,13 +46,13 @@ let utf8String: String = "{'title':'..."
 let feed = try? JSONFeed(jsonString: utf8String)
 ```
 
-Parsing happens upon initialization using `JSONSerialization` and if all goes well you'll be able to access `feed` properties. In case initialization parameters are invalid `JSONFeed` will throw `JSONFeedError`.
+Parsing happens upon initialization using `JSONSerialization` and if all goes well you'll be able to access `feed` properties. In case initialization parameters are invalid, `JSONFeed` will throw `JSONFeedError`.
 
 ---
 
 ## Documentation
 
-Bets way to learn about this library is to browse source files and inline documentation. 
+Best way to learn about this library is to browse source files and inline documentation. 
 
 Below is quick description of objects and their responsibilities for those who are in hurry:
 
