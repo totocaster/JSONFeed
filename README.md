@@ -6,7 +6,6 @@
 
 Swift parser for JSON Feed — a new format similar to RSS and Atom but in JSON. For more information about this new feed format visit: https://jsonfeed.org
 
-
 ---
 
 ⚠️ **Contributions are more than welcome!** Here is how my todo list looks like now:
@@ -28,16 +27,16 @@ Thanks for checking-out JSONFeed!
 
 ## Usage
 
-Parsing feed is super easy, just pass data from responce when creating a feed object and that's it! Parsing happens upon initialization using `JSONSerialization` and if all goes well you'll be able to access `feed` properties. In case initialization parameters are invalid `JSONFeed` will throw `JSONFeedError`.
+Parsing a feed is super easy; just pass data from a response when creating a feed object and that's it! Parsing happens upon initialization using `JSONSerialization` and if all goes well you'll be able to access `feed` properties. In case initialization parameters are invalid, `JSONFeed` will throw `JSONFeedError`.
 
 ```swift
-let feed = try? JSONFeed(data: responceData)
+let feed = try? JSONFeed(data: responseData)
 ```
 
-Alternatively you can create objects from JSON string or JSON dictionary:
+Alternatively you can create objects from a JSON string or JSON dictionary:
 
 ```swift
-let dictionary:[String: Any] = ["title":"..."]
+let dictionary: [String: Any] = ["title": "..."]
 let feed = try? JSONFeed(json: dictionary)
 ```
 
@@ -45,7 +44,6 @@ let feed = try? JSONFeed(json: dictionary)
 let utf8String: String = "{'title':'..."
 let feed = try? JSONFeed(jsonString: utf8String)
 ```
-
 ---
 
 ## Documentation
