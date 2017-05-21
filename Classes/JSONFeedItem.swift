@@ -105,7 +105,6 @@ public struct JSONFeedItem {
             self.attachments = []
         }
         
-        
     }
     
 }

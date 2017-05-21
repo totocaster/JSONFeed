@@ -20,6 +20,7 @@
 		992AD6381ECD315300EEBB0B /* URL+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AD6371ECD315300EEBB0B /* URL+Json.swift */; };
 		992AD63B1ECD35B000EEBB0B /* jsonfeed_org_podcast.json in Resources */ = {isa = PBXBuildFile; fileRef = 992AD63A1ECD35B000EEBB0B /* jsonfeed_org_podcast.json */; };
 		992AD63D1ECD35F500EEBB0B /* jsonfeed_org_microblog.json in Resources */ = {isa = PBXBuildFile; fileRef = 992AD63C1ECD35F500EEBB0B /* jsonfeed_org_microblog.json */; };
+		9988872D1ED158EB00E65AAE /* JSONFeed+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9988872C1ED158EB00E65AAE /* JSONFeed+Equatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		992AD6371ECD315300EEBB0B /* URL+Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+Json.swift"; path = "../Classes/URL+Json.swift"; sourceTree = "<group>"; };
 		992AD63A1ECD35B000EEBB0B /* jsonfeed_org_podcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonfeed_org_podcast.json; sourceTree = "<group>"; };
 		992AD63C1ECD35F500EEBB0B /* jsonfeed_org_microblog.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonfeed_org_microblog.json; sourceTree = "<group>"; };
+		9988872C1ED158EB00E65AAE /* JSONFeed+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSONFeed+Equatable.swift"; path = "Classes/JSONFeed+Equatable.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				992AD62C1ECD269A00EEBB0B /* JSONFeedAttachment.swift */,
 				992AD6311ECD26BD00EEBB0B /* JSONFeedAuthor.swift */,
 				992AD6331ECD26DA00EEBB0B /* JSONFeedHub.swift */,
+				9988872B1ED158B900E65AAE /* Protocol Conformance */,
 				992AD6351ECD26E400EEBB0B /* Specs */,
 				992AD6361ECD313700EEBB0B /* Foundation+Extensions */,
 			);
@@ -138,6 +141,14 @@
 				992AD63C1ECD35F500EEBB0B /* jsonfeed_org_microblog.json */,
 			);
 			name = "Test JSONs";
+			sourceTree = "<group>";
+		};
+		9988872B1ED158B900E65AAE /* Protocol Conformance */ = {
+			isa = PBXGroup;
+			children = (
+				9988872C1ED158EB00E65AAE /* JSONFeed+Equatable.swift */,
+			);
+			name = "Protocol Conformance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9988872D1ED158EB00E65AAE /* JSONFeed+Equatable.swift in Sources */,
 				992AD6281ECD262A00EEBB0B /* JSONFeedItem.swift in Sources */,
 				992AD6341ECD26DA00EEBB0B /* JSONFeedHub.swift in Sources */,
 				992AD62E1ECD269A00EEBB0B /* JSONFeed.swift in Sources */,
