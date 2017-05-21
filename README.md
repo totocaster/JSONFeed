@@ -16,9 +16,9 @@ Swift parser for JSON Feed — a new format similar to RSS and Atom but in JSON.
 - [x] Add CococaPods support
 - [x] Add Carthage support
 - [ ] Add SPM support
-- [ ] Add CHANGELOG to repository
+- [x] Add CHANGELOG to repository
 - [ ] Add much more elaborate tests
-- [ ] Add `Equtable` for objects it makes sense
+- [x] Add `Equtable` for objects it makes sense
 - [ ] Consider adding byte and date formatter for `JSONFeedAttachment`
 
 Thanks for checking-out JSONFeed!
