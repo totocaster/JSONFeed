@@ -28,7 +28,7 @@ Thanks for checking-out JSONFeed!
 
 ## Usage
 
-Parsing feed is super easy, just pass data from responce or file to when crating feed object and that's it! 
+Parsing feed is super easy, just pass data from responce when creating a feed object and that's it! Parsing happens upon initialization using `JSONSerialization` and if all goes well you'll be able to access `feed` properties. In case initialization parameters are invalid `JSONFeed` will throw `JSONFeedError`.
 
 ```swift
 let feed = try? JSONFeed(data: responceData)
@@ -45,8 +45,6 @@ let feed = try? JSONFeed(json: dictionary)
 let utf8String: String = "{'title':'..."
 let feed = try? JSONFeed(jsonString: utf8String)
 ```
-
-Parsing happens upon initialization using `JSONSerialization` and if all goes well you'll be able to access `feed` properties. In case initialization parameters are invalid `JSONFeed` will throw `JSONFeedError`.
 
 ---
 
