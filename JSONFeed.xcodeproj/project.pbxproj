@@ -84,10 +84,10 @@
 		992AD5FD1ECD17D500EEBB0B = {
 			isa = PBXGroup;
 			children = (
-				992AD6081ECD17D500EEBB0B /* Products */,
 				9919EE961EDFE292006A6402 /* SPM */,
 				992AD6091ECD17D500EEBB0B /* Sources */,
 				992AD6141ECD17D600EEBB0B /* Tests */,
+				992AD6081ECD17D500EEBB0B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
