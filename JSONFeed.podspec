@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JSONFeed"
-  s.version      = "0.8.3"
+  s.version      = "0.8.4"
   s.summary      = "Simple JSONFeed parser written in Swift."
 
   # This description is used to generate tags and improve search results.
