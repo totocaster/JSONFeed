@@ -37,8 +37,8 @@ extension JSONFeedAttachment: Equatable {
     }
 }
 
-extension JSONFeedAuhtor: Equatable {
-    public static func ==(_ lhs: JSONFeedAuhtor, _ rhs: JSONFeedAuhtor) -> Bool {
+extension JSONFeedAuthor: Equatable {
+    public static func ==(_ lhs: JSONFeedAuthor, _ rhs: JSONFeedAuthor) -> Bool {
         return lhs.name == rhs.name
             && lhs.avatar == rhs.avatar
             && lhs.url == rhs.url

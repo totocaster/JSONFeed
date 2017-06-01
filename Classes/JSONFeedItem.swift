@@ -45,8 +45,8 @@ public struct JSONFeedItem {
     /// - warning: If formating was wrong from publisher's side, date of parsing is set.
     public let dateModified: Date?
     
-    /// Specifies the feed author. The author object has several members, see `JSONFeedAuhtor`.
-    public let author: JSONFeedAuhtor?
+    /// Specifies the feed author. The author object has several members, see `JSONFeedAuthor`.
+    public let author: JSONFeedAuthor?
     
     /// Tags tend to be just one word, but they may be anything.
     /// - note: they are not the equivalent of Twitter hashtags. Some blogging systems and other feed formats call these categories.
@@ -94,7 +94,7 @@ public struct JSONFeedItem {
         }
         
         if let authorJson = json[keys.author] as? JsonDictionary {
-            self.author = JSONFeedAuhtor(json: authorJson)
+            self.author = JSONFeedAuthor(json: authorJson)
         } else {
             self.author = nil
         }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct JSONFeedAuhtor {
+public struct JSONFeedAuthor {
     
     /// The author’s name
     public let name: String?

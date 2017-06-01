@@ -52,8 +52,8 @@ public class JSONFeed {
     /// URL of an image for the feed suitable to be used in a source list. It should be square and relatively small, but not smaller than 64 x 64 (so that it can look good on retina displays).
     public let favicon: URL?
     
-    /// Specifies the feed author. The author object has several members, see `JSONFeedAuhtor`.
-    public let author: JSONFeedAuhtor?
+    /// Specifies the feed author. The author object has several members, see `JSONFeedAuthor`.
+    public let author: JSONFeedAuthor?
     
     /// says whether or not the feed is finished — that is, whether or not it will ever update again.
     public let isExpired: Bool
@@ -90,7 +90,7 @@ public class JSONFeed {
         self.isExpired = json[keys.expired] as? Bool ?? false // nil = false, as per spec
         
         if let authorJson = json[keys.author] as? JsonDictionary {
-            self.author = JSONFeedAuhtor(json: authorJson)
+            self.author = JSONFeedAuthor(json: authorJson)
         } else {
             self.author = nil
         }
