@@ -6,7 +6,7 @@
 //  Copyright © 2017 Toto Tvalavadze. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for JSONFeed.
 FOUNDATION_EXPORT double JSONFeedVersionNumber;
