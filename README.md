@@ -2,7 +2,7 @@
 
 ![Swift Version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat)
 ![TravisCI](https://api.travis-ci.org/totocaster/JSONFeed.svg?branch=master)
-[![Platform](https://img.shields.io/cocoapods/p/JSONFeed.svg?style=flat)](http://cocoapods.org/pods/Typist)
+[![Platform](https://img.shields.io/cocoapods/p/JSONFeed.svg?style=flat)](http://cocoapods.org/pods/JSONFeed)
 [![Twitter](https://img.shields.io/badge/twitter-@totocaster-blue.svg)](http://twitter.com/totocaster)
 
 Swift parser for JSON Feed — a new format similar to RSS and Atom but in JSON. For more information about this new feed format visit: https://jsonfeed.org
